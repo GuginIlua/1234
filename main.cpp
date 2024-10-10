@@ -49,12 +49,48 @@ int main()
         }
         for(int i =0;i<points.size();i++){
             c=g[0];
-            if(c==points[i]) flag2=1;
+            if(c==points[i] || !points[i]) flag2=1;
             if(flag2==1) break;
         }
         if(flag2==0){
             cout<<"Point error2"<<endl;
             continue;
+        }
+        flag2=0;
+        if(g.size()==4){
+            for(int i =0;i<points.size();i++){
+                c=g[4];
+                if(c==points[i] || !points[i]) flag2=1;
+                if(flag2==1) break;
+            }
+            if(flag2==0){
+                cout<<"Point error2"<<endl;
+                continue;
+            }
+        }
+        flag2=0;
+        if(g.size()==8){
+            for(int i =0;i<points.size();i++){
+                c=g[7];
+                if(c==points[i] || !points[i]) flag2=1;
+                if(flag2==1) break;
+            }
+            if(flag2==0){
+                cout<<"Point error2"<<endl;
+                continue;
+            }
+        }
+        flag2=0;
+        if(g.size()==11){
+            for(int i =0;i<points.size();i++){
+                c=g[10];
+                if(c==points[i] || !points[i]) flag2=1;
+                if(flag2==1) break;
+            }
+            if(flag2==0){
+                cout<<"Point error2"<<endl;
+                continue;
+            }
         }
         flag2=0;
         for(int i =0;i<points.size();i++){
@@ -73,9 +109,34 @@ int main()
             if(flag2==1) break;
         }
         if(flag2==0){
-            cout<<"Transition symbol error"<<endl;
+            cout<<"Transition symbol error1"<<endl;
             continue;
         }
+        flag2=0;
+        if(g.size()>5){
+        for(int i =0;i<step.size();i++){
+            c=g[6];
+            if(c==step[i]) flag2=1;
+            if(flag2==1) break;
+        }
+        if(flag2==0){
+            cout<<"Transition symbol error2"<<endl;
+            continue;
+        }
+        }
+        flag2=0;
+        if(g.size()>8){
+        for(int i =0;i<step.size();i++){
+            c=g[9];
+            if(c==step[i]) flag2=1;
+            if(flag2==1) break;
+        }
+        if(flag2==0){
+            cout<<"Transition symbol error3"<<endl;
+            continue;
+        }
+        }
+        flag2=0;
         if(g.size()==5 || g.size()==4){
             if(g[1]=='-' && g[2]=='>'){
                 c=g[0];;
