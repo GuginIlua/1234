@@ -44,27 +44,28 @@ int main()
             flag2=1;
         }
         if(flag2==0){
-            cout<<"Point error"<<endl;
+            cout<<"Reminder: use ->"<<endl;
             continue;
         }
+        flag2=0;
         for(int i =0;i<points.size();i++){
             c=g[0];
-            if(c==points[i] || !points[i]) flag2=1;
+            if(c==points[i]) flag2=1;
             if(flag2==1) break;
         }
         if(flag2==0){
-            cout<<"Point error2"<<endl;
+            cout<<"Point error"<<endl;
             continue;
         }
         flag2=0;
         if(g.size()==4){
             for(int i =0;i<points.size();i++){
                 c=g[4];
-                if(c==points[i] || !points[i]) flag2=1;
+                if(c==points[i]) flag2=1;
                 if(flag2==1) break;
             }
             if(flag2==0){
-                cout<<"Point error2"<<endl;
+                cout<<"Point error"<<endl;
                 continue;
             }
         }
@@ -72,11 +73,11 @@ int main()
         if(g.size()==8){
             for(int i =0;i<points.size();i++){
                 c=g[7];
-                if(c==points[i] || !points[i]) flag2=1;
+                if(c==points[i]) flag2=1;
                 if(flag2==1) break;
             }
             if(flag2==0){
-                cout<<"Point error2"<<endl;
+                cout<<"Point error"<<endl;
                 continue;
             }
         }
@@ -84,11 +85,11 @@ int main()
         if(g.size()==11){
             for(int i =0;i<points.size();i++){
                 c=g[10];
-                if(c==points[i] || !points[i]) flag2=1;
+                if(c==points[i]) flag2=1;
                 if(flag2==1) break;
             }
             if(flag2==0){
-                cout<<"Point error2"<<endl;
+                cout<<"Point error"<<endl;
                 continue;
             }
         }
@@ -99,7 +100,7 @@ int main()
             if(flag2==1) break;
         }
         if(flag2==0){
-            cout<<"Point error3"<<endl;
+            cout<<"Point error"<<endl;
             continue;
         }
         flag2=0;
@@ -109,7 +110,7 @@ int main()
             if(flag2==1) break;
         }
         if(flag2==0){
-            cout<<"Transition symbol error1"<<endl;
+            cout<<"Transition symbol error"<<endl;
             continue;
         }
         flag2=0;
@@ -120,7 +121,7 @@ int main()
             if(flag2==1) break;
         }
         if(flag2==0){
-            cout<<"Transition symbol error2"<<endl;
+            cout<<"Transition symbol error"<<endl;
             continue;
         }
         }
@@ -132,7 +133,7 @@ int main()
             if(flag2==1) break;
         }
         if(flag2==0){
-            cout<<"Transition symbol error3"<<endl;
+            cout<<"Transition symbol error"<<endl;
             continue;
         }
         }
