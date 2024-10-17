@@ -1,0 +1,6 @@
+X,Y,Z,V,W
+X->yY|zZ
+Y->1V
+Z->0W|0Y
+V->xZ|xW|1
+W->1Y|0
